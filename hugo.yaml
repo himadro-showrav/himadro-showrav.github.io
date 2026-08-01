@@ -1,0 +1,369 @@
+baseURL: "https://himadro-showrav.github.io/"
+locale: "en-us"
+languageCode: "en-us"
+title: "Showrav Das"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+enableEmoji: true
+
+pagination:
+  pagerSize: 6
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# -------------------------------------------------------------------
+# Site metadata / SEO
+# -------------------------------------------------------------------
+params:
+  title: "Showrav Das"
+  author: "Showrav Das"
+  description: "Showrav Das — Data Science and Machine Learning researcher working on Digital Twin-enabled predictive maintenance, intelligent health monitoring, and data-driven fault diagnosis."
+  keywords:
+    - "Showrav Das"
+    - "Data Science"
+    - "Machine Learning"
+    - "Artificial Intelligence"
+    - "Digital Twin"
+    - "Predictive Maintenance"
+    - "Smart Manufacturing"
+    - "Research"
+  favicon: "/fav.png"
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    disableThemeToggle: false
+    defaultTheme: "light"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.65
+    textAlign: left
+
+  # Clean indigo/violet palette with strong contrast in both modes.
+  color:
+    textColor: "#1f2333"
+    secondaryTextColor: "#5b6072"
+    textLinkColor: "#4f46e5"
+    backgroundColor: "#ffffff"
+    secondaryBackgroundColor: "#f3f4ff"
+    primaryColor: "#4f46e5"
+    secondaryColor: "#f8f9fa"
+
+    darkmode:
+      textColor: "#e8e9f2"
+      secondaryTextColor: "#b8bacb"
+      textLinkColor: "#a5b4fc"
+      backgroundColor: "#11121a"
+      secondaryBackgroundColor: "#1b1c2a"
+      primaryColor: "#a5b4fc"
+      secondaryColor: "#1b1c2a"
+
+  # -----------------------------------------------------------------
+  # Navigation
+  # -----------------------------------------------------------------
+  navbar:
+    align: ms-auto
+    brandName: "Showrav Das"
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # -----------------------------------------------------------------
+  # Hero
+  # -----------------------------------------------------------------
+  hero:
+    enable: true
+    intro: "Hi, I'm"
+    title: "Showrav Das."
+    subtitle: "Data Science & Machine Learning Researcher"
+    content: "I work at the intersection of machine learning, Digital Twin technology, and intelligent predictive maintenance — developing data-driven methods for health monitoring, fault diagnosis, and reliable decision support in complex systems."
+    image: "/images/me.png"
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "View Resume"
+      url: "/resume_of_showrav_das.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: "https://github.com/himadro-showrav"
+        - icon: fab fa-linkedin
+          url: "https://www.linkedin.com/in/showrav-das-a67a2522a/"
+      customIcons: []
+
+  # -----------------------------------------------------------------
+  # About
+  # -----------------------------------------------------------------
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/showrav.png"
+    content: |-
+      I am a Computer Science and Engineering graduate with a strong interest in Data Science, Machine Learning, and applied AI research. My current research direction focuses on Digital Twin-enabled predictive maintenance for smart manufacturing systems, with an emphasis on health monitoring, fault diagnosis, and predictive analytics.
+
+      I am particularly interested in combining data-driven learning with domain knowledge so that intelligent models are not only accurate, but also useful for real-world engineering systems.
+
+      Through the Erasmus+ international exchange program at Silesian University of Technology in Poland, I gained international academic exposure and experience working in a different research and learning environment.
+    skills:
+      enable: true
+      title: "Research & Technical Skills"
+      items:
+        - "Python"
+        - "NumPy / Pandas"
+        - "Scikit-learn"
+        - "TensorFlow / Keras"
+        - "PyTorch"
+        - "Machine Learning"
+        - "Deep Learning"
+        - "Digital Twin"
+        - "Predictive Maintenance"
+        - "SQL / Databases"
+        - "Data Visualization"
+        - "Git / GitHub"
+
+  # -----------------------------------------------------------------
+  # Experience
+  # -----------------------------------------------------------------
+  experience:
+    enable: true
+    items:
+      - company: "BLIZ IT"
+        companyUrl: ""
+        jobs:
+          - name: "WordPress Developer & Lead Generation Officer"
+            date: "Jul 2024 - Aug 2025"
+            info:
+              content: "Dhaka, Bangladesh"
+            content: |-
+              - Developed and maintained responsive WordPress websites for client requirements.
+              - Customized themes and plugins while improving website performance and security.
+              - Managed lead-generation activities to support client acquisition.
+              - Worked directly with clients and cross-functional teams to deliver tailored web solutions.
+
+  # -----------------------------------------------------------------
+  # Education
+  # -----------------------------------------------------------------
+  education:
+    enable: true
+    items:
+      - title: "Bachelor of Science in Computer Science and Engineering"
+        school:
+          name: "Daffodil International University"
+          url: "https://www.daffodilvarsity.edu.bd"
+        date: "Jan 2022 - Jan 2026"
+        GPA: "3.73 / 4.00"
+        content: |-
+          Thesis: "Digital Twin–Enabled Physics-Constrained GAN for Li-ion Battery Health Prognostics." Developed a Digital Twin framework for predictive maintenance of complex systems, integrating physics constraints with generative deep learning for battery health prognostics.
+
+          Relevant coursework: Data Structures & Algorithms, Artificial Intelligence, Data Mining and Machine Learning, Database Management Systems, Computer Networks, Software Engineering, Embedded Systems and IoT, Natural Language Processing, Statistics and Probability.
+
+      - title: "Erasmus+ KA107 International Credit Mobility"
+        school:
+          name: "Silesian University of Technology"
+          url: "https://www.polsl.pl/en/"
+        date: "Mar 2024 - Jul 2024"
+        content: |-
+          International academic exchange in Gliwice, Poland (EQF level 6, 15 ECTS credits).
+
+          Coursework: Computer Networks, Fundamentals of Database Systems, Microprocessor and Embedded Systems, Operating Systems, and Software Engineering.
+
+  # -----------------------------------------------------------------
+  # Publications
+  #
+  # NOTE:
+  # Hugo Profile's standard sections do not expose a native
+  # "publications" component in the same way as Projects/Education.
+  # Keeping publications in their own data block makes the content
+  # cleanly separated and ready for a small theme/layout override.
+  # -----------------------------------------------------------------
+  publications:
+    enable: true
+    title: "Publications"
+    subtitle: "Selected research papers and ongoing research"
+    items:
+      - title: "Digital Twin–Enabled Physics-Constrained GAN for Li-ion Battery Health Prognostics"
+        authors: "Showrav Das; under the supervision of Dr. Md Alamgir Kabir"
+        venue: "Research work in progress"
+        year: "2026"
+        status: "In Progress"
+        content: "A Digital Twin-based framework for lithium-ion battery health prognostics using a Physically Constrained GAN, combining physics-informed constraints with deep learning on the NASA battery aging dataset."
+        tags:
+          - "Digital Twin"
+          - "GAN"
+          - "Battery Health"
+          - "Predictive Maintenance"
+
+      - title: "Physics-Informed LSTM for State-of-Health Prediction of Li-ion Batteries"
+        authors: "Showrav Das; Zadid Al Lisan; Md. Mehrab Hossain Badhan; Dr. Md Alamgir Kabir"
+        venue: "Research manuscript"
+        year: "2026"
+        status: "Research Work"
+        content: "A Physics-Informed LSTM model for battery State-of-Health forecasting using the NASA dataset, integrating monotonicity and smoothness constraints for physically consistent degradation prediction."
+        tags:
+          - "Physics-Informed ML"
+          - "LSTM"
+          - "Battery SOH"
+
+      - title: "SpongePath: A Dataset for Sponge Gourd Leaf Disease Classification"
+        authors: "Showrav Das and collaborators"
+        venue: "MIET 2026; previously accepted at IDDA 2025"
+        year: "2026"
+        status: "Submitted"
+        content: "A dataset and machine learning study for automated sponge gourd leaf disease identification using SVM, CNN, and VGG16 transfer learning, achieving up to 92% classification accuracy."
+        tags:
+          - "Computer Vision"
+          - "Dataset"
+          - "Plant Disease"
+          - "Deep Learning"
+
+  # -----------------------------------------------------------------
+  # Achievements / Awards
+  # -----------------------------------------------------------------
+  achievements:
+    enable: true
+    title: "Achievements & Activities"
+    items:
+      - title: "Erasmus+ KA171 International Credit Mobility Scholarship"
+        content: "Fully funded international academic exchange at Silesian University of Technology, Poland."
+        image: "/images/achievement.jpg"
+
+      - title: "The Duke of Edinburgh International Award — Silver & Bronze"
+        content: "Completed sustained programs involving community service, leadership development, and outdoor expeditions; currently completing advanced requirements for the Gold Award."
+        image: "/images/dukee.png"
+
+      - title: "Oracle Dev Gym — Databases for Developers: Foundations"
+        content: "Scored 92% and completed training in SQL fundamentals, joins, aggregations, data manipulation, and transactions."
+        image: "/images/oracle.png"
+
+      - title: "Volunteer Internship — International Affairs"
+        content: "Daffodil International University — supported visa processing, delegate registration, international guest management, and high-level event organization."
+        image: "/images/ia_diu.jpg"
+
+  # -----------------------------------------------------------------
+  # Projects
+  # -----------------------------------------------------------------
+  projects:
+    enable: true
+    title: "Selected Projects"
+    items:
+      - title: "Antifraud Medicine QR"
+        content: "A FastAPI service for counterfeit-medicine verification using encrypted QR payloads, authenticity checks, and scan tracking. Implements ChaCha20-Poly1305 authenticated encryption, PBKDF2 key derivation, a local issuance registry, and a Dockerized API architecture."
+        image: "/images/projects/antifraudqr.png"
+        badges:
+          - "Python"
+          - "FastAPI"
+          - "Docker"
+          - "Cryptography"
+        links:
+          - icon: fab fa-github
+            url: "https://github.com/himadro-showrav/antifraud_medicine_qr"
+
+      - title: "IoT Gas Leakage Monitoring & Automatic Ventilation System"
+        content: "An ESP32-based safety system using three MQ2 sensors at different heights to detect gas leaks. The system triggers a local alarm and exhaust fan and sends real-time alerts through Blynk IoT."
+        image: "/images/projects/iot_gas.png"
+        badges:
+          - "ESP32"
+          - "C++"
+          - "IoT"
+          - "Blynk"
+        links:
+          - icon: fab fa-github
+            url: "https://github.com/himadro-showrav/IoT-Gas-Monitoring-System"
+
+      - title: "Library Management System"
+        content: "A web-based application for managing books, borrowing, returns, reservations, and user accounts through a responsive interface."
+        image: "/images/projects/library.png"
+        badges:
+          - "Web App"
+          - "Database"
+        links:
+          - icon: fab fa-github
+            url: "https://github.com/himadro-showrav/Library-Management-System"
+
+  # -----------------------------------------------------------------
+  # Contact
+  # -----------------------------------------------------------------
+  contact:
+    enable: true
+    title: "Let's Connect"
+    content: "I'm open to research collaborations, academic opportunities, technical discussions, and interesting projects in AI, Data Science, and intelligent systems."
+    btnName: "Email me"
+    btnLink: "mailto:das15-5425@diu.edu.bd"
+
+  footer:
+    socialNetworks:
+      github: "https://github.com/himadro-showrav"
+      linkedin: "https://www.linkedin.com/in/showrav-das-a67a2522a/"
+
+  singlePages:
+    socialShare: false
+
+  terms:
+    copyright: "Showrav Das — All rights reserved"
+
+  # -----------------------------------------------------------------
+  # Typography / small visual refinements
+  # -----------------------------------------------------------------
+  customScripts: |-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --portfolio-radius: 14px;
+      }
+
+      body, p, li, a, span {
+        font-family: 'Inter', sans-serif;
+      }
+
+      h1, h2, h3, h4, h5, h6,
+      .navbar-brand, .hero .title, .section-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+      }
+
+      .btn-primary,
+      .badge {
+        border-radius: 8px;
+      }
+
+      .card,
+      .achievement-card,
+      .project-card {
+        border-radius: var(--portfolio-radius);
+      }
+
+      .section-title {
+        letter-spacing: -0.02em;
+      }
+    </style>

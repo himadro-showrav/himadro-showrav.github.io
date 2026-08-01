@@ -1,0 +1,40 @@
+{{ if .Site.Params.publications.enable | default false }}
+{{- $publications := .Site.Language.Params.publications | default .Site.Params.publications -}}
+<section id="publications" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3>{{ $publications.title | default "Publications" }}</h3>
+      {{ with $publications.subtitle }}<p class="publications-subtitle">{{ . }}</p>{{ end }}
+    </div>
+    <div class="row g-4 justify-content-center">
+      {{ range $index, $paper := $publications.items }}
+      <div class="col-12 col-lg-10">
+        <article class="publication-card h-100">
+          <div class="publication-number">{{ printf "%02d" (add $index 1) }}</div>
+          <div class="publication-body">
+            <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+              {{ with $paper.year }}<span class="publication-year">{{ . }}</span>{{ end }}
+              {{ with $paper.status }}<span class="publication-status">{{ . }}</span>{{ end }}
+            </div>
+            <h4>{{ $paper.title }}</h4>
+            {{ with $paper.authors }}<p class="publication-authors">{{ . }}</p>{{ end }}
+            {{ with $paper.venue }}<p class="publication-venue">{{ . }}</p>{{ end }}
+            {{ with $paper.content }}<p class="publication-content">{{ . }}</p>{{ end }}
+            {{ with $paper.tags }}
+            <div class="publication-tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div>
+            {{ end }}
+            {{ if or $paper.paperUrl $paper.codeUrl $paper.doi }}
+            <div class="publication-links">
+              {{ with $paper.paperUrl }}<a href="{{ . }}" target="_blank" rel="noopener" class="btn btn-sm">Paper</a>{{ end }}
+              {{ with $paper.codeUrl }}<a href="{{ . }}" target="_blank" rel="noopener" class="btn btn-sm">Code</a>{{ end }}
+              {{ with $paper.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener" class="btn btn-sm">DOI</a>{{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
